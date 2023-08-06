@@ -1,0 +1,8 @@
+<div *ngIf="allTweets.length" class="show_tweets">
+    <h3>Show {{allTweets.length}} Tweets</h3>
+</div>
+<app-tweet *ngFor="let t of tweets" [tweet]="t"> </app-tweet>
+
+<div *ngIf="allTweets.length && showLoadMoreButton" class="show_tweets">
+    <h3 (click)="onLoadMore()">Show more</h3>
+</div>

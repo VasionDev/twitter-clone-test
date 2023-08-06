@@ -1,0 +1,15 @@
+<div class="center-content-cs">
+    <div class="trending_tweets_title">
+      <h2>You are following</h2>
+    </div>
+    <div *ngFor="let user of users" class="people_profile">
+      <img src="./assets/images/user.png" alt="user" class="my_photo" />
+       <div class="people_info">
+        <h3>{{user.username}}</h3>
+        <p>{{user.username}}</p>
+      </div>
+      <button *ngIf="user.following" (click)="followUser(user.id)" class="follow_btn">Follow</button>
+      <button *ngIf="!user.following" (click)="unfollowUser(user.id)" class="follow_btn">Unfollow</button>
+    </div>
+  </div>
+  

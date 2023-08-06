@@ -1,0 +1,26 @@
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <header>Signup</header>
+            <form (submit)="signup()">
+                <div class="field input-field">
+                    <input type="text" placeholder="Username" class="input" [(ngModel)]="username" name="username">
+                </div>
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" [(ngModel)]="email" name="email">
+                </div>
+                <div class="field input-field">
+                    <input type="password" placeholder="Password" class="password" [(ngModel)]="password" name="password">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+                <div class="field button-field">
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>Already have an account? <a routerLink="/login" class="link login-link">Login</a></span>
+            </div>
+        </div>
+    </div>
+</section>

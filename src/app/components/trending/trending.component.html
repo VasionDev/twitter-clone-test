@@ -1,0 +1,15 @@
+<div class="trending_tweets_container">
+    <div class="trending_tweets_title">
+      <h2>What's happening</h2>
+    </div>
+    <div class="trending_tweets" id="trending_tweets">
+        <div *ngFor="let trend of trendings" class="trendingTweet">
+            <p><span class="trending_p">{{trend.trendingIn}}</span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></p>
+            <h2>{{trend.hashTag}}</h2>
+            <p>{{trend.trendingWith}}</p>
+        </div>
+    </div>
+    <div class="show_more">
+      <p>Show more</p>
+    </div>
+</div>
